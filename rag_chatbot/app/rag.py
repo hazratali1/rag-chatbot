@@ -1,3 +1,5 @@
+#RAG logic
+
 import os
 import google.generativeai as genai
 from sentence_transformers import SentenceTransformer
