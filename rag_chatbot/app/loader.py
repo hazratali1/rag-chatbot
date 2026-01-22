@@ -1,5 +1,4 @@
-
-#PDF chunks
+# Loads PDFs and splits into semantic chunks
 
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -11,9 +10,9 @@ def load_and_split_pdfs(data_folder="data"):
 
     for file in os.listdir(data_folder):
         if file.endswith(".pdf"):
-            file_path = os.path.join(data_folder, file)
+            path = os.path.join(data_folder, file)
 
-            loader = PyPDFLoader(file_path)
+            loader = PyPDFLoader(path)
             docs = loader.load()
 
             for d in docs:
@@ -26,6 +25,4 @@ def load_and_split_pdfs(data_folder="data"):
         chunk_overlap=100
     )
 
-    chunks = splitter.split_documents(documents)
-
-    return chunks
+    return splitter.split_documents(documents)
