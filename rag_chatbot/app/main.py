@@ -37,11 +37,7 @@ def health():
 
 @app.post("/ask")
 def ask_basic(question: str):
-    """
-    BASIC RAG
-    - manual cosine similarity
-    - suitable for small PDFs
-    """
+
     return ask_question_basic(
         question,
         texts,
@@ -56,11 +52,7 @@ def ask_basic(question: str):
 
 @app.post("/ask/advanced")
 def ask_advanced(question: str):
-    """
-    ADVANCED RAG
-    - FAISS retriever
-    - scalable for large PDFs
-    """
+    
     return ask_question_advanced(
         question,
         vectorstore
