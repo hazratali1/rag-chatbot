@@ -129,7 +129,7 @@ pip install -r requirements.txt
 
 ### Step 3: Add environment variable
 
-Create a `.env` file:
+Create a `.env` file: (alredy exist in folder )
 
 ```env
 GEMINI_API_KEY=your_api_key_here
@@ -158,5 +158,6 @@ http://127.0.0.1:8000/docs
 * Chat history memory
 * Docker deployment
 * UI integration
+
 
 
